@@ -70,6 +70,17 @@ function initConf() {
 
 window.onload = function () {
     const confBtn = document.getElementById('conf');
+    const body = document.body;
+
+    body.addEventListener(
+          'keydown'
+        , event => {
+            if (event.key == 'f' && event.ctrlKey && event.shiftKey) {
+                const conf = document.getElementById('config');
+                conf.style.display = conf.style.display == 'none' ? 'block' : 'none';
+            }
+        }
+    );
 
     confBtn.addEventListener(
           'click'
