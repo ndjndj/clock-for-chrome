@@ -75,7 +75,8 @@ window.onload = function () {
     body.addEventListener(
           'keydown'
         , event => {
-            if (event.key == 'f') {
+            if (event.shiftKey && event.ctrlKey && event.altKey) {
+                console.log(event.key);
                 const conf = document.getElementById('config');
                 conf.style.display = conf.style.display == 'none' ? 'block' : 'none';
             }
