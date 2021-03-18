@@ -9,7 +9,7 @@ body {
 
 #config {
     background-color: aqua;
-    display: none;
+    display: block;
 }
 
 #clock {
