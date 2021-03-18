@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scr</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/scrByElectron.js"></script>
+</head>
+<body>
+    <div id="config" style="background-color: aqua;">
+        <label for="begin">Begin hour</label>
+        <input type="number" id="begin"/>
+        <label for="end">End hour</label>
+        <input type="number" id="end"/>
+        <input type="button" value="done" id="conf" />
+    </div>
+    <div class="clock-wrapper">
+        <p id="clock">00:00:00</p>
+        <div id="par">0%</div>
+        <div id="prg-frame">
+            <div id="prg-bar"></div>
+        </div>
+    </div>
+</body>
+</html>
