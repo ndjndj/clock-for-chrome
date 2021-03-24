@@ -1,5 +1,5 @@
 var BEGIN_HOUR = 10;
-var END_HOUR = 22;
+var END_HOUR = 19;
 
 function setClock(){
     let elClock = document.getElementById("clock");
@@ -68,19 +68,22 @@ function initConf() {
     end.value = END_HOUR;
 }
 
+function toggleConfDisplay(e) {
+    if (e.shiftKey && e.ctrlKey && e.altKey) {
+        console.log(e.key);
+        const conf = document.getElementById('config');
+        conf.style.display = conf.style.display == 'none' ? 'block' : 'none';
+    }
+}
+
 window.onload = function () {
     const confBtn = document.getElementById('conf');
     const body = document.body;
 
     body.addEventListener(
           'keydown'
-        , event => {
-            if (event.shiftKey && event.ctrlKey && event.altKey) {
-                console.log(event.key);
-                const conf = document.getElementById('config');
-                conf.style.display = conf.style.display == 'none' ? 'block' : 'none';
-            }
-        }
+        , event => { toggleConfDisplay(event); }
+        , false
     );
 
     confBtn.addEventListener(
