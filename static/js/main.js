@@ -77,7 +77,15 @@ function toggleConfDisplay(e) {
 }
 
 function changeThemeColor(e) {
-    /* #e1ffda と #aaffaa をRGBに変換して差分だして計算したらいい感じのtext-shadowにできるかも */
+    const INIT_COLOR = '#e1ffda';
+    const INIT_SHADOW_COLOR = '#aaffaa';
+
+    const subRed = parseInt(INIT_COLOR.substring(1,3), 16) 
+                        - parseInt(INIT_SHADOW_COLOR.substring(1,3), 16);
+    const subGreen = parseInt(INIT_COLOR.substring(3,5), 16) 
+                        - parseInt(INIT_SHADOW_COLOR.substring(3,5), 16);
+    const subBlue = parseInt(INIT_COLOR.substring(5,7), 16) 
+                        - parseInt(INIT_SHADOW_COLOR.substring(5,7), 16);
     
     const color = e.target.value;
     const prgbar = document.getElementById('prg-bar');
