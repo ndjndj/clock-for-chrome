@@ -79,6 +79,7 @@ function toggleConfDisplay(e) {
 window.onload = function () {
     const confBtn = document.getElementById('conf');
     const body = document.body;
+    const colorPicker = document.getElementById('color');
 
     body.addEventListener(
           'keydown'
@@ -92,12 +93,14 @@ window.onload = function () {
         , false
     );
     
+    colorPicker.addEventListener(
+          'input'
+        , changeThemeColor
+        , false
+    );
+
     initConf();
     let timer = setInterval("setClock()", 1000);
-    
-    const pickr = new Pickr({
-        el: '#color-picker', theme: 'classic',
-        default: '#42445a'
-    });
+
 }
 
