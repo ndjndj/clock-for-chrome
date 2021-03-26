@@ -89,7 +89,7 @@ function changeThemeColor(e) {
 window.onload = function () {
     const confBtn = document.getElementById('conf');
     const body = document.body;
-    const colorPicker = document.getElementById('color');
+    const colorPicker = document.getElementById('picker');
 
     body.addEventListener(
           'keydown'
@@ -105,7 +105,7 @@ window.onload = function () {
     
     colorPicker.addEventListener(
           'input'
-        , changeThemeColor
+        , event => { changeThemeColor(event); }
         , false
     );
 
