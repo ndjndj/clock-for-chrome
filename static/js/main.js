@@ -77,13 +77,14 @@ function toggleConfDisplay(e) {
 }
 
 function changeThemeColor(e) {
+    '';
     const color = e.target.value;
     const prgbar = document.getElementById('prg-bar');
     const parcent = document.getElementById('par');
     const clock = document.getElementById('clock');
     prgbar.style.backgroundColor = color;
-    parcent.style.color = color;
-    clock.style.color = color;
+    parcent.style.textShadow = `0 0 20px ${color}, 0 0 20px rgba(10, 175, 230, 0)`;
+    clock.style.textShadow = `0 0 20px ${color}, 0 0 20px rgba(10, 175, 230, 0)`;
 }
 
 window.onload = function () {
