@@ -94,4 +94,10 @@ window.onload = function () {
     
     initConf();
     let timer = setInterval("setClock()", 1000);
+    
+    const pickr = new Pickr({
+        el: '#color-picker', theme: 'classic',
+        default: '#42445a'
+    });
 }
+
