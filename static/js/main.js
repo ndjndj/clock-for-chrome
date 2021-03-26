@@ -76,6 +76,16 @@ function toggleConfDisplay(e) {
     }
 }
 
+function changeThemeColor(e) {
+    const color = e.target.value;
+    const prgbar = document.getElementById('prg-bar');
+    const parcent = document.getElementById('par');
+    const clock = document.getElementById('clock');
+    prgbar.style.backgroundColor = color;
+    parcent.style.backgroundColor = color;
+    clock.style.backgroundColor = color;
+}
+
 window.onload = function () {
     const confBtn = document.getElementById('conf');
     const body = document.body;
