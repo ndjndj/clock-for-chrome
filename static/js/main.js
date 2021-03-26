@@ -77,7 +77,8 @@ function toggleConfDisplay(e) {
 }
 
 function changeThemeColor(e) {
-    '';
+    /* #e1ffda と #aaffaa をRGBに変換して差分だして計算したらいい感じのtext-shadowにできるかも */
+    
     const color = e.target.value;
     const prgbar = document.getElementById('prg-bar');
     const parcent = document.getElementById('par');
