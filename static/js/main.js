@@ -82,8 +82,8 @@ function changeThemeColor(e) {
     const parcent = document.getElementById('par');
     const clock = document.getElementById('clock');
     prgbar.style.backgroundColor = color;
-    parcent.style.backgroundColor = color;
-    clock.style.backgroundColor = color;
+    parcent.style.color = color;
+    clock.style.color = color;
 }
 
 window.onload = function () {
